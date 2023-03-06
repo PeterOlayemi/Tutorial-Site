@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Sign Up</title>
+        <style>
+            body{color:white}
+            .blog-post-title {
+                margin-bottom: 5px;
+                font-size: 40px;
+            }
+        </style>
+<script>
+function saysignup()
+{alert('Checking and Saving User Info...');}
+</script>
+    </head>
+    <body>
+    {% extends "zenith/base.html" %}
+
+{% block header %}
+
+    <div class=''>
+        <div class="container">
+        <br><br><br><br><br><h2 class="blog-post-title">Sign Up</h2>
+        </div>
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+
+<form method ='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-lg btn-default" onclick="saysignup()">Sign Up &raquo;</button>
+</form>
+ 
+<br><br><div style="text-align: center;"><h4>Already Have An Account?</h4> <a href = "{% url 'zenith:login' %}" class="btn btn-lg btn-default">Log In &raquo;</a></div>
+<br><br><br><br><br>
+{%endblock%}
+</body>

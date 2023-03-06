@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Student Register</title>
+        <style>
+            .blog-post-title {
+                margin-bottom: 5px;
+                font-size: 40px;
+            }
+        </style>
+<script>
+function saydp()
+{alert('Saving Changes To Display Picture');}
+</script>
+    </head>
+    <body>
+    {% extends "zenith/base.html" %}
+
+{% block header %}
+
+    <div class=''>
+        <div class="container">
+        <br><br><br><br><br><h2 class="blog-post-title">Edit Display Picture</h2>
+        </div>
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+<div style="font-size: 19px;width: 100%;">
+
+<form method="post" class="form" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <br><button class="btn btn-lg btn-default" onclick="saydp()">Save Changes &raquo;</button>
+
+    </form>
+</div>
+<br><br><br><a href="{% url 'zenith:studentprofile' %}" class="btn btn-lg btn-default">&laquo; Go Back</a>   <a href="{% url 'zenith:home' %}" class="btn btn-lg btn-default">&laquo; Go To Home </a>
+<br><br><br><br><br><br>
+
+{%endblock%}

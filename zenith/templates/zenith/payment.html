@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Payments</title>
+        <style>
+            .blog-post-title {
+                margin-bottom: 5px;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+    {% extends "zenith/base.html" %}
+
+{% block header %}
+
+    <div class=''>
+        <div class="container">
+        <br><br><br><br><br><h2 class="blog-post-title">Payments</h2>
+        </div>
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+<div style="font-size: 19px;">
+<p>Hello Esteemed Student of Zenith,<br>So far so good, weldone... It is to our joy that you've decided to join this blessed tutorial. We are sure that this decision of yours will lead you to an outstanding results.<br>
+And if you are still contemplating whether to join this tutorial or not, I assure you that joining us will be one of your best decisions in life.<br><br>Now, to complete this online registration, you are to pay a sum of  <u># 1 000 000</u> in the next 30 days after registration. This payment will verify your account and you will be contacted on how the tutorials will commence.<br>
+Fill in <a href="{% url 'zenith:paymentfile' %}">this form &raquo;</a> after payment.<br><br>
+The tutorial fee is to be paid to any of the following accounts:<br><br>
+<div style="text-align:center">
+Account Name: Zenith Tutorial Corp<br>
+Account Number: 2005210217<br>
+Bank: FirstBank<br>
+</div>Or:<br>
+<div style="text-align:center">
+Account Name: Zenith Tutor <br>
+Account Number: 3183567201<br>
+Bank: United Bank for Africa<br>
+</div>
+<br><br>
+<u><b>Kindly Note:</b></u><br><br>
+<ul>
+<li>Before payment, Make sure that your student profile is complete and accurate. You can check and edit your profile <a href="{% url 'zenith:studentprofile'%}">HERE &raquo;</a></li>
+<li>Do not create another account. This might lead to ban and deletion of account.</li>
+<li>After payments, Make sure to send your name and payment's debit alert in jpg / pdf / doc through <a href="{% url 'zenith:paymentfile' %}">HERE &raquo;</a>
+<li>You will be contacted through email on your payment updates.</li>
+<li>When payment is verified, you will be contacted on how your tutorials will start.</li>
+<li>If your tutorial fee is not paid within 30 days of account registration, your account will be deleted.</li>
+<li>To send a message to us concerning payments and other issues, you can click <a href="{%url 'zenith:message'%}">HERE &raquo;</a></li>
+</li>
+</p>
+<br>
+<a href="{% url 'zenith:home' %}" class="btn btn-lg btn-default">&laquo; Go To Home</a>
+<br><br><br><br><br>
+</div>
+{%endblock%}

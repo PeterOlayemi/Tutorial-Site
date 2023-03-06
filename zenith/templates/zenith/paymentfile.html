@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Payments</title>
+        <style>
+            .blog-post-title {
+                margin-bottom: 5px;
+                font-size: 40px;
+            }
+        </style>
+<script>
+function sayadder()
+{alert('Adding Payment File...');}
+</script>
+    </head>
+    <body>
+    {% extends "zenith/base.html" %}
+
+{% block header %}
+
+    <div class=''>
+        <div class="container">
+        <br><br><br><br><br><h2 class="blog-post-title">Add Payment File</h2>
+        </div>
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+<div style="font-size: 19px;">
+
+<form method="post" class="form" enctype="multipart/form-data">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <button class="btn btn-lg btn-default" onclick="sayadder()">Add &raquo;</button>
+
+</form><br><br>
+<a href="{% url 'zenith:paymenthome' %}" class="btn btn-lg btn-default">&laquo; Go Back</a>   <a href="{% url 'zenith:home' %}" class="btn btn-lg btn-default">&laquo; Go To Home </a>
+</div>
+<br><br><br><br><br><br><br><br>
+
+{%endblock%}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Contact Us</title>
+        <style>
+            .blog-post-title {
+                margin-bottom: 5px;
+                font-size: 40px;
+            }
+        </style>
+<script>
+function linkedin()
+{alert('Redirecting To LinkedIn');}
+function facebook()
+{alert('Redirecting To Facebook');}
+function whatsapp()
+{alert('Redirecting To WhatsApp');}
+function mail()
+{alert('Redirecting To Mail');}
+</script>
+    </head>
+    <body>
+    {% extends "zenith/base.html" %}
+
+{% block header %}
+
+    <div class=''>
+        <div class="container">
+        <br><br><br><br><br><h2 class="blog-post-title">Contact Us</h2>
+        </div>
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+<div style="font-size: 19px;">
+    Dear Esteemed Student of Zenith,<br>If you have any questions, reviews or criticisms, you can always reach us by filling this <a href="{%url 'zenith:message'%}"><u>Simple Form Here &raquo;</u></a><br>
+    A reply will be sent to the email address added to this form in 3 working days. <br>Kindly bear with us.<br><br><br>
+    You can also visit our social media platforms below...
+    <ul>
+        <li>LinkedIn: <a href="https://linkedin.com/in/zenith" onclick="linkedin()">Zenith Tutorial</a></li>
+        <li>Facebook: <a href="https://facebook.com/zenith" onclick="facebook()">Zenith Tutorial</a></li>
+        <li>WhatsApp: <a href="https:wa.me/23450356890" onclick="whatsapp()">+23450356890</a></li>
+        <li>Mail: <a href="mailto:zenithtutorial@gmail.com?subject=Enter Subject&body=Hi Zenith, ..." onclick="mail()">zenithtutorial@gmail.com</a></li>
+    </ul>
+<br><br><br><a href="{% url 'zenith:home' %}" class="btn btn-lg btn-default">&laquo; Go To Home</a>
+</div>
+<br><br><br><br><br><br><br><br>
+{%endblock%}
