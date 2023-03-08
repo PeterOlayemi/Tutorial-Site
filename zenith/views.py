@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate, logout, login
 from .forms import RegisterForm, StudentRegisterForm,MessageForm, DpForm, PaymentForm, PaymentFileForm
-from .models import Image, Student, dp
+from .models import Student, dp
 # Create your views here.
 
 def home(request):
@@ -129,8 +129,7 @@ def hotel_image_view(request):
 
 @login_required
 def aboutus(request):
-    image=Image.objects.all()
-    return render(request, 'zenith/aboutus.html', {'image':image})
+    return render(request, 'zenith/aboutus.html')
 
 @login_required
 def contactus(request):

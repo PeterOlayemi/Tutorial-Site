@@ -45,6 +45,3 @@ class Message(models.Model):
 
     def __str__(self):
         return f"Message from {self.owner}"
-
-class Image(models.Model):
-    about_us_image=models.ImageField(upload_to='images/', blank=True, null=True)

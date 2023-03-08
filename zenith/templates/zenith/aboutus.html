@@ -7,6 +7,7 @@
 
         <title>About Us</title>
     {% extends "zenith/base.html" %}
+    {% load static %}
         <style>
             .blog-post-title {
                 margin-bottom: 5px;
@@ -30,11 +31,9 @@
 <div style="font-size: 19px;">
     Zenith Tutorial is a LAUTECH- and KWASU-based tutorial provider that provides high-quality tutorial for 100 level students across these schools who are ready to bag a first-class in their results. With the production of 100 students with a CGPA of 5.0 in the last two sessions, Zenith tutorial has proven to the best tutorial provider in these two schools and Nigeria at large.<br>
     <br><h2><b>Meet The Founder</b></h2><hr>
-{% for hotel in image %}
     <div class="col-md-3">
-    <img src="{{ hotel.about_us_image.url }}" class="img-responsive" style="width: 100%; text-align: center; margin-right: 10px;" />
+    <img src="{% static 'ab.jpg' %}" class="img-responsive" style="width: 100%; text-align: center; margin-right: 10px;" />
     </div>
-{% endfor %}
     <div class="col-md-9">
     <p><br>Meet <u>Taiwo Eureka</u>. He is the founder of Zenith Tutorial and his motive is to help freshers build a strong foundation as undergraduates so that they can graduate with an outstanding result. He is a student of LAUTECH studying Medicine. He has a CGPA of 5.0 as he is in his final year. His tutorial is cheap and is of high quality.</p>
     </div>
